@@ -1,0 +1,81 @@
+Object-Oriented-Programming:
+------------------------------
+# Features of object-oriented programming
+1.Class
+2.Object
+3.Encapsulation
+4.Abstraction
+5.Inheritance
+6.Polymorphism
+
+# Class---->
+------------------------------
+-> It is the blueprint of an object(entity).
+-> It is the description of an object.
+-> It is the template.
+-> Logical existence.
+
+# Object---->
+------------------------------
+-> Object is the instance of the class.
+-> Object has state(properties) and behaviour(method).
+-> Physical existence.
+
+# How to make a class in python:
+------------------------------
+Syntax:
+       Class <class name>:
+             -state----> attributes/properties---> variables
+             -behaviour---> functioning-------> methods
+
+example:
+	Class Student:
+	      Variables: id, name, address, height, weight, contact.......
+	      Methods: working, reading, sleeping, eating.........
+
+# How to make an object:
+----------------------------
+S1 = Student()
+S2 = Student()
+S3 = Student()
+
+S1, S2 and S3 are reference variables which point to a particulat object.
+
+# self---->
+--------------------------
+-> self is a reference variable which always points to a current object.
+
+
+# Types of variables:	
+	1. instace variables
+		-> It is the object related variable.
+
+	2. static variables
+		-> It is the variable which is created inside the class but outside of the methods
+
+	3. local variables
+		-> The variable which is declare inside the method is known as local variable.
+
+
+# Types of methods:
+---------------------
+	1. instance method:
+		-> Object related method
+		-> Methods accessing through refernce variables
+		-> it accesses instance variables
+		-> Method which first parameter is self. 
+
+	2. class method:
+		-> Class related method.
+		-> Methods accessing through class name
+		-> It access class(static) variable
+		-> Method which first parameter is cls.
+		-> Method must have decorator - @classmethod
+		What is decorator----> is desing pattern in python which add new functionality/behaviour.
+
+	3. static method:
+		-> Method which do not access both instance and class variable.
+		-> It only access local variables.
+		-> Utility methods
+		-> Must have a decorator - @staticmethod 
+		
