@@ -21,7 +21,7 @@ print(linear_search(L1, a))
 
 def binary_search(list, search_item):
     min = 0
-    max = len(list) - 1
+    max = len(list)
     while min <= max:
         mid = (min + max) // 2
         if search_item == list[mid]:

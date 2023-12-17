@@ -1,0 +1,17 @@
+Big O => Upper-bound (Worst Case), 
+Big Omega => Lower bound (Best Case), and 
+Big Theta => Mix of the two
+
+
+Linear Search => Worst Case = O(n) and Best Case = O(1)
+Binary Search => Worst Case = O(logn) and Best Case = O(1)
+Bubble Sort => Worst Case = O(n^2) and best Case = O(n)
+Selection Sort => Worst Case = O(n^2) and best Case = O(n^2)
+Insertion Sort => Worst Case = O(n^2) and best Case = O(n)
+Merge Sort => Worst Case = O(n*logn) and best Case = O(n*logn)
+
+<<tkinter>>
+config => used to access an object's attributes after its initialisation
+withdraw => Removes the window from the screen (without destroying it)
+destroy => destroys a widget
+To make a window = Tk()

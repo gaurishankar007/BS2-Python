@@ -1,0 +1,353 @@
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+    <meta name="viewport" content="width = initial-scale" />
+    <meta name="viewport" content="height = initial-scale" />
+    
+<title>Turnitin Originality Report</title>
+
+<base href="http://api.turnitin.com:443">
+<style type="text/css">
+	
+body	{
+	color: #000;
+	background: #ddd;
+	padding: 0;
+	border: 0;
+	font: 14px Arial, Verdana, sans-serif;
+	margin: 0;
+	text-align: center;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+p	{
+	padding: .8em 1.5em;
+	margin: 0;
+	text-align: left;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	text-align: left;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+h2	{
+	font-size: 15px;
+	margin: 20px 0 10px 20px;
+	}
+	
+a:link, a:visited	{
+	text-decoration: underline;
+	color: #00f;
+	}
+	
+a:hover, a:active	{
+	text-decoration: underline;
+	color: #888;
+	}
+	
+img#logo	{
+	float: right;
+	padding-right: 20px;
+	padding-top: 10px;
+	}
+	
+div#container	{
+	border: 1px solid #aaa;
+	width: 770px;
+	margin: 20px auto;
+	background: #fff;
+	padding: 10px 0;
+	}
+	
+div#top	{
+	background: #fff;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 15px;
+	}
+	
+div#content	{
+	background: #fff;
+	}
+	
+#top p	{
+	padding: .3em 0 .3em 20px;
+	}
+
+#top span	{
+	padding-right: 35px;
+	}
+	
+#top p#orig	{
+	padding-top: 15px;
+	}
+	
+#orig span#score.red	{
+	border-right: 18px solid red;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.orange	{
+	border-right: 18px solid orange;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.yellow	{
+	border-right: 18px solid yellow;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.green	{
+	border-right: 18px solid green;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.blue	{
+	border-right: 18px solid blue;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+div.divider	{
+	width: 7in;
+	border: 1px dotted #888;
+	margin: auto;
+	padding: 4px 0 4px 10px;
+	font-weight: bold;
+	background: #ddd;
+	font-size: 15px;
+	}
+	
+div.links	{
+	width: 7in;
+	margin: auto;
+	}
+	
+.links div	{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div#last	{
+	padding: 15px 20px 20px 20px;
+	border-bottom: 0;
+	}
+	
+div.number	{
+	float: right;
+	background: white;
+	border: 1px solid #888;
+	margin: 0 0 0 20px;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+div.number-l	{
+	float: left;
+	background: white;
+	border: 1px solid #888;
+	margin: 6px 16px 10px 0;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+.links div p	{
+	padding: .2em 1.5em .4em 0;
+	}
+	
+.links div p#mess	{
+	padding: .2em 1.5em 0 0;
+	}
+	
+div#body	{
+	line-height: 1.5em;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 20px;
+	}
+	
+#body p	{
+	color: #555;
+	padding-top: 30px;
+	line-height: 20px;
+	}
+
+	
+#body a	{
+	display: block;
+	color: #D10A0A;
+	margin: 1em 3em;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 1em 1em;
+	border: 1px dotted #888;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 26px;
+	background: #FFFFE5;
+	}
+
+#body span	{
+	color: #555;
+	font-weight: normal;
+	font-size: 14px;
+	}
+
+#body span.number	{
+	display: block;
+	float: right;
+	color: #000;
+	font-weight: normal;
+	border: 1px solid #888;
+	padding: 0 6px;
+	font-weight: bold;
+	margin-left: 15px;
+	font-size: .9em;
+	background: #fff;
+	}
+	
+#actions	{
+	display: none;
+	}
+
+</style>
+
+
+
+</head>
+
+<body id="or_print_report">
+
+
+<div id="container">
+
+<div id="top">
+    <div id="content">
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+            <p id="title">
+            <img src="/r/build/images/b3964fd7e38c8fcbb8bfbf2efc1f0635cb_turnitin_logo.gif" id="logo" width="60">
+            Turnitin Originality Report
+            </p>
+                <div class="general_info">
+                    <p>
+                        <span>Assignment Final Report</span>
+                        
+                        by Student User
+                        
+                    </p>
+                    <p>
+                        From Final assignment report Submission Part 1 (Moodle TT) (STW122COM-Introduction to Algorithms-M20 (Moodle TT))
+                    </p>
+                    <ul>
+                        <li>Processed on 02-Sep-2020 08:05 IST</li>
+                        <li>ID: 1377978372</li>
+                        <li>Word Count: 483</li>
+                    </ul>
+                </div>
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box green">&nbsp;</div>
+                        <div class="similarity_title">Similarity Index</div>
+                        <div class="similarity_percent">2%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">Similarity by Source</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>2%</dd>
+                            <div class="clear"></div>
+                            <dt>Publications:</dt>
+                            <dd>0%</dd>
+                            <div class="clear"></div>
+                            <dt>Student&nbsp;Papers:</dt>
+                            <dd>2%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+    </div>
+</div>
+
+<div class="divider">sources:</div>
+
+<div class="links">
+
+	<div id="last">
+	<div class="number-l">1</div>
+	<p>2% match (student papers from 22-Sep-2015)</p>
+
+	<a href="/paperInfo.asp?r=97.7698697220472&svr=20&session-id=e6fca38b495c4243b62c8cc09bb88fa4&lang=en_us&oid=oid:1:574346269&perc=2">Submitted to Texas A&M University, College Station on 2015-09-22</a>
+
+	</div>
+
+</div>
+
+
+
+<div class="divider">paper text:</div>
+<div id="body">
+Link of GitHub account for my assignment &lt;&lt;https://github.com/softwarica-github/final-assignment-gaurishankar007&gt;&gt; Introduction A Book Management System has been made in this project using Python 3.7.4 (32 bit) in PyCharm 2020.2 (Community Edition). Python is a high level-built object oriented, interpreted dynamic <a href="javascript:openDSC(574346269, 1, '29');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="29" name="1" ><span class="b-ref">1</span>programming language. It was developed by Guido van Rossum, released in 1991.</a> It is used for mathematics, system scripting, web development, software development (W3schools, n.d.). PyCharm is a very popular Integrated Development Environment specially used for python programming language. It provides a wide range of necessary tools for the Python developers (Tutorialspoint, n.d.). A Book Management System is a system which keeps records of all the books of a book store. This System shows the details of all the books, authors and book genres available in a book store. A book store might have lots of problems while accessing the information about the books, authors and book genres without any tool and have to waste more time to access the information. For example, it will be difficult to find out which genres and authors of book are available in the store and how many, the customer’s required book is available or not in the book store and how many and the price of the book. Therefore, A Book Management system has been developed to get rid of those problems. This system has following functionalities. ? ? ? ? First it requires login in the system to control its details. Keeps records of all the authors, book genres and books available in a book store. New authors, book genres and books can be added any time. The existing authors, book genres and book details can be updated and deleted any time. ? The books can be searched according to the book’s ISBN, Title, language, authors, genres and publication year. ? ? The authors and book genres also can be searched according to their id and name. As book table is related with the author and book genre table, a book can be added only if its author and book genres exist in author table and book genre table correspondingly. If any author and book genre is deleted from their table, then all Screenshots User Interface Code Conclusion A Book Management System has been successfully made in this project using Python 3.7.4 (32 bit) in PyCharm 2020.2 (Community Edition). This system is typically made for the book stores to keep good records of the books. Using this system, a book store can get rid of lots of problem and save lots of time. This system helps to keep records of details of authors, book genres and the books available in a book store and the details are updatable, can be deleted any time. This system also provides a security by login option. This system is recommended to have in every book store. References Tutorialspoint, n.d. Tutorialspoint.com. [Online] Available at: https://www.tutorialspoint.com/pycharm/pycharm_introduction.htm [Accessed 15 August 2020]. W3schools, n.d. W3schools.com. [Online] Available at: https://www.w3schools.com/python/python_intro.asp [Accessed 15 August 2020]. 1 10173183 2 10173183 3 10173183 4 10173183 5 10173183 6 10173183 7 10173183 8 10173183 9 10173183 10 10173183 11 10173183 12 10173183 13 10173183 14 10173183 15 10173183 16 10173183 17 10173183 18 10173183 19 10173183 20 10173183 21 10173183 22 10173183 23 10173183 24 10173183 25 10173183 26 10173183 27 10173183 28 10173183 29 10173183 30 10173183 31 10173183 32 10173183 33 10173183 
+</div>
+</div>
+</body>
+</html>
